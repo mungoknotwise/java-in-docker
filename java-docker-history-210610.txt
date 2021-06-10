@@ -1,0 +1,250 @@
+    1  l
+    2  ls
+    3  exit
+    4  ls
+    5  ls -al
+    6  vim .bash_aliases
+    7  source .bash_aliases
+    8  mdcd java
+    9  ls
+   10  ext
+   11  exit
+   12  ls
+   13  ls -al
+   14  history
+   15  docke
+   16  docker
+   17  docker run hello-world
+   18  pwd
+   19  cdl java
+   20  pwd
+   21  ls
+   22  #dockerfile_lint  -f /path/to/dockerfile  [-f /path/to/second/dockerfile]  [-r /path/to/rule/file]
+   23  docker run -it --rm -v $PWD:/root/            projectatomic/dockerfile-lint            dockerfile_lint
+   24  ls
+   25  docker run -it --rm -v $PWD:/root/            projectatomic/dockerfile-lint            dockerfile_lint -f Dockerfile.jre-11-slim
+   26  ls
+   27  cdl
+   28  curl -LO “https://downloads.dockerslim.com/releases/1.35.2/dist_linux.tar.gz”
+   29  curl -LO "https://downloads.dockerslim.com/releases/1.35.2/dist_linux.tar.gz"
+   30  ls
+   31  tar -zxvf dist_linux.tar.gz 
+   32  sudo cp -piv dist_linux/docker-slim* /usr/local/bin/
+   33  hg
+   34  hl
+   35  history
+   36  rm -rf dist_linux
+   37  rm dist_linux.tar.gz 
+   38  history
+   39  pwd
+   40  docker images
+   41  #d1165f221234
+   42  docker rmi d1165f221234
+   43  docker rmi d1165f221234 -f
+   44  ls
+   45  pwd
+   46  cdl java
+   47  ls
+   48  docker build -t hello-world-jre-11-slim:1 . -f Dockerfile.jre-11-slim 
+   49  docker run --rm -it hello-world-jre-11-slim:1
+   50  ls -al ~/
+   51  ls -al ~/.cache
+   52  #docker run --rm -v [YOUR_CACHE_DIR]:/root/.cache/ aquasec/trivy [YOUR_IMAGE_NAME]
+   53  docker run --rm -v ~/.cache:/root/.cache/ aquasec/trivy hello-world-jre-11-slim:1
+   54  docker run --rm -v ~/.cache:/root/.cache/ aquasec/trivy --help
+   55  ls /root/.cache
+   56  sudo ls /root/.cache
+   57  docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v ~/.cache:/root/.cache/ aquasec/trivy hello-world-11-jre-slim:1
+   58  docker images
+   59  docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v ~/.cache:/root/.cache/ aquasec/trivy hello-world-jre-11-slim:1
+   60  hg build
+   61  docker build -t hello-world-jre-11-slim:1 . -f Dockerfile.jre-11-slim 
+   62  #docker build -t hello-world-11-jre-slim:1 . -f Dockerfile.jre-11-slim 
+   63  vim Dockerfile.jre-11-slim 
+   64  mv Dockerfile.jre-11-slim  Dockerfile.openjdk-11-jre-slim
+   65  vim Dockerfile.openjdk-11-jre-slim 
+   66  docker build -t hello-world:openjdk-11-jre-slim-1 . -f Dockerfile.openjdk-11-jre-slim
+   67  docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v ~/.cache:/root/.cache/ aquasec/trivy hello-world:openjdk-11-jre-slim-1
+   68  ls
+   69  vim Dockerfile.openjdk-11-jre-slim 
+   70  docker build -t hello-world:openjdk-11-jre-slim-1 . -f Dockerfile.openjdk-11-jre-slim
+   71  docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v ~/.cache:/root/.cache/ aquasec/trivy hello-world:openjdk-11-jre-slim-1
+   72  vim Dockerfile.openjdk-11-jre-slim 
+   73  cp -piv Dockerfile.openjdk-11-jre-{slim-alpine}
+   74  cp -piv Dockerfile.openjdk-11-jre-{slim,alpine}
+   75  docker build -t hello-world:openjdk-11-jre-alpine-1 . -f Dockerfile.openjdk-11-jre-alpine
+   76  docker build -t hello-world:openjdk-11-jre-slim-1 . -f Dockerfile.openjdk-11-jre-slim
+   77  docker images
+   78  docker rmi openjdk-11-jre-slim-1
+   79  docker rmi hello-world:openjdk-11-jre-slim-1
+   80  docker images
+   81  docker rmi 78aa690063ef
+   82  docker rmi 064baf6361e9
+   83  docker images
+   84  ls
+   85  ll
+   86  vim Dockerfile.openjdk-11-jre-slim
+   87  docker images
+   88  docker build -t hello-world:openjdk-11-jre-slim-1 . -f Dockerfile.openjdk-11-jre-slim
+   89  docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v ~/.cache:/root/.cache/ aquasec/trivy hello-world:openjdk-11-jre-slim-1
+   90  ll
+   91  r b
+   92  docker build -t hello-world:openjdk-11-jre-alpine-1 . -f Dockerfile.openjdk-11-jre-alpine
+   93  docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v ~/.cache:/root/.cache/ aquasec/trivy hello-world:openjdk-11-jre-alpine-1
+   94  vim Dockerfile.openjdk-11-jre-alpine 
+   95  docker build -t hello-world:openjdk-11-jre-alpine-1 . -f Dockerfile.openjdk-11-jre-alpine
+   96  vim Dockerfile.openjdk-11-jre-alpine 
+   97  docker build -t hello-world:openjdk-11-jre-alpine-1 . -f Dockerfile.openjdk-11-jre-alpine
+   98  vim Dockerfile.openjdk-11-jre-alpine 
+   99  docker build -t hello-world:openjdk-11-jre-alpine-1 . -f Dockerfile.openjdk-11-jre-alpine
+  100  vim Dockerfile.openjdk-11-jre-alpine 
+  101  docker build -t hello-world:openjdk-11-jre-alpine-1 . -f Dockerfile.openjdk-11-jre-alpine
+  102  vim Dockerfile.openjdk-11-jre-alpine 
+  103  docker build -t hello-world:openjdk-11-jre-alpine-1 . -f Dockerfile.openjdk-11-jre-alpine
+  104  vim Dockerfile.openjdk-11-jre-alpine 
+  105  docker build -t hello-world:openjdk-11-jre-alpine-1 . -f Dockerfile.openjdk-11-jre-alpine
+  106  docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v ~/.cache:/root/.cache/ aquasec/trivy hello-world:openjdk-11-jre-alpine-1
+  107  hg run
+  108  docker run --rm -it hello-world-jre-11-slim:1
+  109  docker images
+  110  docker run --rm -it hello-world:openjdk-11-jre-alpine-1
+  111  docker history hello-world:openjdk-11-jre-alpine-1
+  112  vim Dockerfile.openjdk-11-jre-alpine 
+  113  docker build -t hello-world:openjdk-11-jre-alpine-1 . -f Dockerfile.openjdk-11-jre-alpine
+  114  hg lint
+  115  ls
+  116  docker run -it --rm -v $PWD:/root/            projectatomic/dockerfile-lint            dockerfile_lint -f Dockerfile.jre-11-slim
+  117  docker run -it --rm -v $PWD:/root/            projectatomic/dockerfile-lint            dockerfile_lint -f Dockerfile.openjdk-11-jre-alpine
+  118  docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v ~/.cache:/root/.cache/ aquasec/trivy hello-world:openjdk-11-jre-alpine-1
+  119  hg run | grep hello
+  120  docker run --rm -it hello-world:openjdk-11-jre-alpine-1
+  121  ls
+  122  vim Dockerfile.openjdk-11-jre-alpine 
+  123  docker build -t hello-world:openjdk-11-jre-alpine-1 . -f Dockerfile.openjdk-11-jre-alpine
+  124  docker-slim xray hello-world:openjdk-11-jre-alpine-1
+  125  ls
+  126  vim HelloWorld.java 
+  127  docker build -t hello-world:openjdk-11-jre-alpine-1 . -f Dockerfile.openjdk-11-jre-alpine
+  128  vim HelloWorld.java 
+  129  docker build -t hello-world:openjdk-11-jre-alpine-1 . -f Dockerfile.openjdk-11-jre-alpine
+  130  vim HelloWorld.java 
+  131  vim RuntimeDemo.java
+  132  vim HelloWorld.java 
+  133  ls
+  134  cp {,RuntimeDemo-}Dockerfile.openjdk-11-jre-alpine 
+  135  vim RuntimeDemo-Dockerfile.openjdk-11-jre-alpine
+  136  ls
+  137  cp HelloWorldManifest RuntimeDemoManifest
+  138  vim RuntimeDemoManifest 
+  139  ls
+  140  docker build -t runtime-demo:openjdk-11-jre-alpine-1 . -f RuntimeDemo-Dockerfile.openjdk-11-jre-alpine
+  141  docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v ~/.cache:/root/.cache/ aquasec/trivy runtime-demo:openjdk-11-jre-alpine-1
+  142  vim RuntimeDemoManifest 
+  143  vim RuntimeDemo-Dockerfile.openjdk-11-jre-alpine 
+  144  docker build -t runtime-demo:openjdk-11-jre-alpine-1 . -f RuntimeDemo-Dockerfile.openjdk-11-jre-alpine
+  145  docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v ~/.cache:/root/.cache/ aquasec/trivy runtime-demo:openjdk-11-jre-alpine-1
+  146  hg run | grep hello
+  147  docker run --rm -it hello-world:openjdk-11-jre-alpine-1
+  148  docker run --rm -it runtime-demo:openjdk-11-jre-alpine-1
+  149  vim RuntimeDemo-Dockerfile.openjdk-11-jre-alpine 
+  150  docker build -t runtime-demo:openjdk-11-jre-alpine-1 . -f RuntimeDemo-Dockerfile.openjdk-11-jre-alpine
+  151  docker run --rm -it runtime-demo:openjdk-11-jre-alpine-1
+  152  vim RuntimeDemo-Dockerfile.openjdk-11-jre-alpine 
+  153  docker build -t runtime-demo:openjdk-11-jre-alpine-1 . -f RuntimeDemo-Dockerfile.openjdk-11-jre-alpine
+  154  docker run --rm -it runtime-demo:openjdk-11-jre-alpine-1
+  155  vim RuntimeDemo.java 
+  156  docker build -t runtime-demo:openjdk-11-jre-alpine-1 . -f RuntimeDemo-Dockerfile.openjdk-11-jre-alpine
+  157  docker run --rm -it runtime-demo:openjdk-11-jre-alpine-1
+  158  vim .dockerignore
+  159  java --help
+  160  which java
+  161  ls
+  162  cp {RuntimeDemo,CmdLineArgs}-Dockerfile.openjdk-11-jre-alpine
+  163  vim CmdLineArgs-Dockerfile.openjdk-11-jre-alpine 
+  164  hg lint
+  165  docker run -it --rm -v $PWD:/root/            projectatomic/dockerfile-lint            dockerfile_lint -f Dockerfile.openjdk-11-jre-alpine
+  166  docker run -it --rm -v $PWD:/root/ projectatomic/dockerfile-lint dockerfile_lint -f CmdLineArgs-Dockerfile.openjdk-11-jre-alpine
+  167  vim CmdLineArgs-Dockerfile.openjdk-11-jre-alpine 
+  168  docker build -t cmd-line-args:openjdk-11-jre-alpine-1 . -f CmdLineArgs-Dockerfile.openjdk-11-jre-alpine
+  169  hg run
+  170  docker run --rm -it runtime-demo:openjdk-11-jre-alpine-1
+  171  docker run --rm -it cmd-line-args:openjdk-11-jre-alpine-1
+  172  docker run --rm -it cmd-line-args:openjdk-11-jre-alpine-1 | grep UseContainerSupport
+  173  docker run --rm -it cmd-line-args:openjdk-11-jre-alpine-1 | grep -i container
+  174  docker images
+  175  #docker run --rm -it adoptopenjdk/openjdk11:jdk-11.0.2.9-alpine java -XX:+UnlockDiagnosticVMOptions -XX:+PrintFlagsFinal -version | grep UseContainer
+  176  docker run --rm -it adoptopenjdk/openjdk11:jdk-11.0.11.9-alpine java -XX:+UnlockDiagnosticVMOptions -XX:+PrintFlagsFinal -version | grep UseContainer
+  177  vim CmdLineArgs-Dockerfile.openjdk-11-jre-alpine 
+  178  docker run --rm -it adoptopenjdk/openjdk11:jre-11.0.11_9-alpine@sha256:69c257f50bbc4b47a701c6cb0686f1c20bc437a127cb2315ceb671b86718cd15 java -XX:+UnlockDiagnosticVMOptions -XX:+PrintFlagsFinal -version | grep UseContainer
+  179  docker run --rm -it adoptopenjdk/openjdk11:jre-11.0.11_9-alpine@sha256:69c257f50bbc4b47a701c6cb0686f1c20bc437a127cb2315ceb671b86718cd15 java -XX:+UnlockDiagnosticVMOptions -XX:+PrintFlagsFinal -version
+  180  ls
+  181  docker run --rm -it adoptopenjdk/openjdk11:jre-11.0.11_9-alpine@sha256:69c257f50bbc4b47a701c6cb0686f1c20bc437a127cb2315ceb671b86718cd15 java --help
+  182  ls
+  183  rm CmdLineArgs-Dockerfile.openjdk-11-jre-alpine 
+  184  docker images
+  185  docker rmi 7cbed0eb1bb8
+  186  docker images
+  187  vim RuntimeDemo-Dockerfile.openjdk-11-jre-alpine 
+  188  dokcer images --digests
+  189  docker images --digests
+  190  ls
+  191  pwd
+  192  ls
+  193  pwd
+  194  exit
+  195  ls
+  196  ls -al
+  197  sudo apt-get update
+  198  udo apt-get install -y \udo apt-get update
+  199  sudo apt-get install -y     apt-transport-https     ca-certificates     curl     gnupg     lsb-release
+  200  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+  201  echo   "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg]
+  202  https://download.docker.com/linux/ubuntu \
+  203      $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  204  sudo apt-get update
+  205  sudo apt-get updae
+  206  sudo apt-get updat
+  207  sudo apt-get update
+  208  vim /etc/apt/sources.list.d/docker.list
+  209  sudo vim /etc/apt/sources.list.d/docker.list
+  210  sudo apt-get update
+  211  sudo apt-get install docker-ce docker-ce-cli containerd.io
+  212  sudo docker run hello-world
+  213  sudo usermod -aG docker ubuntu
+  214  man newgrp
+  215  newgrp docker
+  216  ls
+  217  pwd
+  218  ls
+  219  exit
+  220  cdl java
+  221  ls
+  222  exit
+  223  docker-slim build --target archlinux:latest --tag archlinux:curl --http-probe=false --exec "curl checkip.amazonaws.com"
+  224  docker images
+  225  docker images | grep curl
+  226  docker-slim build --target archlinux:latest --tag archlinux:curl --http-probe=false --exec "curl checkip.amazonaws.com"
+  227  docker run archlinux:curl curl checkip.amazonaws.com
+  228  docker-slim build --help
+  229  docker-slim build --target archlinux:latest --tag archlinux:curl --exec "curl checkip.amazonaws.com"
+  230  docker-slim build --http-probe=false --target archlinux:latest --tag archlinux:curl --exec "curl checkip.amazonaws.com"
+  231  docker-slim build --http-probe=false --target ubuntu:latest --tag ubuntu:curl --exec "curl checkip.amazonaws.com"
+  232  hg arch
+  233  docker images | grep archlinux
+  234  docker pull ubuntu:latest
+  235  docker-slim build --http-probe=false --target ubuntu:latest --tag ubuntu:curl --exec "curl checkip.amazonaws.com"
+  236  docker images
+  237  docker rmi 7e0aa2d69a15
+  238  docker rmi 0d79d5015200
+  239  docker images
+  240  df -h
+  241  df -h .
+  242  docker system prune --all
+  243  docker images
+  244  pwd
+  245  ls
+  246  up
+  247  ls
+  248  cdl ubuntu/
+  249  ls
+  250  history >java-docker-history-210610.txt

@@ -1,0 +1,20 @@
+FROM openjdk:11.0.11-jdk-slim-buster@sha256:80e91d19353520110a004b7eff2a6b5e00ea1d903dfc22507a7e482493092183 AS build
+LABEL openjdk-jdk-tag="11.0.11-jdk-slim-buster"
+RUN mkdir /app
+WORKDIR /app
+COPY ./HelloWorld.java .
+RUN javac HelloWorld.java
+COPY ./HelloWorldManifest .
+RUN jar cfm HelloWorld.jar HelloWorldManifest HelloWorld.class
+
+FROM adoptopenjdk/openjdk11:jre-11.0.11_9-alpine@sha256:69c257f50bbc4b47a701c6cb0686f1c20bc437a127cb2315ceb671b86718cd15
+LABEL Name="hello-world" \
+      Version="1" \
+      openjdk-jre-tag="jre-11.0.11_9-alpine"
+RUN mkdir /app
+RUN addgroup --system javauser && adduser -S -s /bin/false -G javauser javauser
+COPY --from=build /app/HelloWorld.jar /app/HelloWorld.jar
+WORKDIR /app
+RUN chown -R javauser:javauser /app
+USER javauser
+CMD "dumb-init" "java" "-jar" "HelloWorld.jar"

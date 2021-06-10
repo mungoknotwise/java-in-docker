@@ -1,0 +1,19 @@
+#FROM openjdk:11.0.11-jdk-slim-buster@sha256:80e91d19353520110a004b7eff2a6b5e00ea1d903dfc22507a7e482493092183 AS source
+FROM openjdk@sha256:80e91d19353520110a004b7eff2a6b5e00ea1d903dfc22507a7e482493092183 AS source
+LABEL openjdk-jdk-tag="11.0.11-jdk-slim"
+RUN mkdir /app
+WORKDIR /app
+COPY ./HelloWorld.java .
+RUN javac HelloWorld.java
+COPY ./HelloWorldManifest .
+RUN jar cfm HelloWorld.jar HelloWorldManifest HelloWorld.class
+
+#FROM openjdk:11-jre-slim@sha256:b4cb057e8e7f534c3ae279b5f3205e28d6520c0bdb1f80bbf61c0b8d2c00f983
+FROM openjdk@sha256:b4cb057e8e7f534c3ae279b5f3205e28d6520c0bdb1f80bbf61c0b8d2c00f983
+LABEL Name="hello-world" \
+      Version="1" \
+      openjdk-jre-tag="11-jre-slim"
+RUN mkdir /app
+WORKDIR /app
+COPY --from=source /app/HelloWorld.jar HelloWorld.jar
+CMD "java" "-jar" "HelloWorld.jar"

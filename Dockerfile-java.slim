@@ -1,0 +1,6 @@
+#FROM openjdk:16-jdk-slim-buster@sha256:687432276a878218b238a37cb29a897e9d05ccf6a80dcd885b0d547f35ef1a24
+FROM openjdk:16-jdk-slim-buster@sha256:7ac95ea98fe9de8da6f31e78666b34063ec60bc7667d62106e2c3759846a19dc
+RUN mkdir /app
+COPY ./HelloWorld.jar /app/HelloWorld.jar
+WORKDIR /app
+CMD "java" "-jar" "HelloWorld.jar"
