@@ -19,4 +19,4 @@ COPY --from=build /app/RuntimeDemo.jar /app/RuntimeDemo.jar
 WORKDIR /app
 RUN chown -R javauser:javauser /app
 USER javauser
-CMD "dumb-init" "java" "-jar" "RuntimeDemo.jar"
+ENTRYPOINT ["dumb-init", "java", "-jar", "RuntimeDemo.jar"]
