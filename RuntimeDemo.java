@@ -9,6 +9,7 @@ public class RuntimeDemo {
    }
 
    public static void main(String[] args) {
+      System.out.println("args length: " + args.length);
       try {
 
          // register Message as shutdown hook
@@ -17,9 +18,9 @@ public class RuntimeDemo {
          // print the state of the program
          System.out.println("Program is starting...");
 
-         // cause thread to sleep for 3 seconds
-         System.out.println("Waiting for 10 seconds...");
-         Thread.sleep(10000);
+         // cause thread to sleep for 30 seconds
+         System.out.println("Waiting for 30 seconds...");
+         Thread.sleep(30000);
 
          // print that the program is closing 
          System.out.println("Program is closing...");
