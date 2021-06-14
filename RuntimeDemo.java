@@ -18,7 +18,7 @@ public class RuntimeDemo {
          // print the state of the program
          System.out.println("Program is starting...");
 
-         // cause thread to sleep for 30 seconds
+         // cause thread to sleep for 3 seconds
          System.out.println("Waiting for 30 seconds...");
          Thread.sleep(30000);
 
